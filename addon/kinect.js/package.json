@@ -1,0 +1,10 @@
+{
+    "name": "kinectjs", 
+    "license": "MPL 1.1/GPL 2.0/LGPL 2.1", 
+    "author": "Daisuke Akatsuka", 
+    "version": "0.1", 
+    "fullName": "kinect.js", 
+    "id": "jid1-z3k2YU6iufIYJw", 
+    "description": "to control the kinect from JavaScript",
+    "unpack":"true"
+}

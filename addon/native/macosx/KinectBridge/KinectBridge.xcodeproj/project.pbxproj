@@ -1,0 +1,240 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0F0F899F15C3BB9B003C1612 /* KinectBridge.c in Sources */ = {isa = PBXBuildFile; fileRef = 0F0F899E15C3BB9B003C1612 /* KinectBridge.c */; };
+		0F0F89DE15C3DFCD003C1612 /* libusb-1.0.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F0F89DD15C3DFCD003C1612 /* libusb-1.0.a */; };
+		0F0F89E415C3E074003C1612 /* libfreenect_sync.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F0F89E315C3E074003C1612 /* libfreenect_sync.a */; };
+		0F0F89E815C3E10D003C1612 /* libfreenect_sync.h in Headers */ = {isa = PBXBuildFile; fileRef = 0F0F89E715C3E10D003C1612 /* libfreenect_sync.h */; };
+		0F0F89EA15C3E114003C1612 /* libfreenect.h in Headers */ = {isa = PBXBuildFile; fileRef = 0F0F89E915C3E114003C1612 /* libfreenect.h */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		0F0F899615C3B80C003C1612 /* libKinectBridge.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libKinectBridge.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
+		0F0F899D15C3BAFD003C1612 /* KinectBridge.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = KinectBridge.h; path = src/KinectBridge.h; sourceTree = "<group>"; };
+		0F0F899E15C3BB9B003C1612 /* KinectBridge.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = KinectBridge.c; path = src/KinectBridge.c; sourceTree = "<group>"; };
+		0F0F89DD15C3DFCD003C1612 /* libusb-1.0.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libusb-1.0.a"; path = "/opt/local/lib/libusb-1.0.a"; sourceTree = "<absolute>"; };
+		0F0F89E315C3E074003C1612 /* libfreenect_sync.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libfreenect_sync.a; path = /usr/local/lib/libfreenect_sync.a; sourceTree = "<absolute>"; };
+		0F0F89E715C3E10D003C1612 /* libfreenect_sync.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = libfreenect_sync.h; path = /usr/local/include/libfreenect/libfreenect_sync.h; sourceTree = "<absolute>"; };
+		0F0F89E915C3E114003C1612 /* libfreenect.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = libfreenect.h; path = /usr/local/include/libfreenect/libfreenect.h; sourceTree = "<absolute>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		0F0F899315C3B80C003C1612 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0F0F89DE15C3DFCD003C1612 /* libusb-1.0.a in Frameworks */,
+				0F0F89E415C3E074003C1612 /* libfreenect_sync.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0F0F898B15C3B80C003C1612 = {
+			isa = PBXGroup;
+			children = (
+				0F0F89EB15C3E124003C1612 /* lib */,
+				0F0F89A715C3BC92003C1612 /* src */,
+				0F0F899715C3B80C003C1612 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		0F0F899715C3B80C003C1612 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0F0F899615C3B80C003C1612 /* libKinectBridge.dylib */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		0F0F89A715C3BC92003C1612 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				0F0F899E15C3BB9B003C1612 /* KinectBridge.c */,
+				0F0F899D15C3BAFD003C1612 /* KinectBridge.h */,
+			);
+			name = src;
+			sourceTree = "<group>";
+		};
+		0F0F89EB15C3E124003C1612 /* lib */ = {
+			isa = PBXGroup;
+			children = (
+				0F0F89E915C3E114003C1612 /* libfreenect.h */,
+				0F0F89E715C3E10D003C1612 /* libfreenect_sync.h */,
+				0F0F89E315C3E074003C1612 /* libfreenect_sync.a */,
+				0F0F89DD15C3DFCD003C1612 /* libusb-1.0.a */,
+			);
+			name = lib;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		0F0F899415C3B80C003C1612 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0F0F89E815C3E10D003C1612 /* libfreenect_sync.h in Headers */,
+				0F0F89EA15C3E114003C1612 /* libfreenect.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		0F0F899515C3B80C003C1612 /* KinectBridge */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0F0F899A15C3B80C003C1612 /* Build configuration list for PBXNativeTarget "KinectBridge" */;
+			buildPhases = (
+				0F0F899215C3B80C003C1612 /* Sources */,
+				0F0F899315C3B80C003C1612 /* Frameworks */,
+				0F0F899415C3B80C003C1612 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = KinectBridge;
+			productName = KinectBridge;
+			productReference = 0F0F899615C3B80C003C1612 /* libKinectBridge.dylib */;
+			productType = "com.apple.product-type.library.dynamic";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		0F0F898D15C3B80C003C1612 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0430;
+			};
+			buildConfigurationList = 0F0F899015C3B80C003C1612 /* Build configuration list for PBXProject "KinectBridge" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 0F0F898B15C3B80C003C1612;
+			productRefGroup = 0F0F899715C3B80C003C1612 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				0F0F899515C3B80C003C1612 /* KinectBridge */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		0F0F899215C3B80C003C1612 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0F0F899F15C3BB9B003C1612 /* KinectBridge.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		0F0F899815C3B80C003C1612 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		0F0F899915C3B80C003C1612 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		0F0F899B15C3B80C003C1612 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				EXECUTABLE_PREFIX = lib;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/freenect\"",
+					/opt/local/lib,
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		0F0F899C15C3B80C003C1612 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				EXECUTABLE_PREFIX = lib;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/freenect\"",
+					/opt/local/lib,
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0F0F899015C3B80C003C1612 /* Build configuration list for PBXProject "KinectBridge" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0F0F899815C3B80C003C1612 /* Debug */,
+				0F0F899915C3B80C003C1612 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0F0F899A15C3B80C003C1612 /* Build configuration list for PBXNativeTarget "KinectBridge" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0F0F899B15C3B80C003C1612 /* Debug */,
+				0F0F899C15C3B80C003C1612 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 0F0F898D15C3B80C003C1612 /* Project object */;
+}
