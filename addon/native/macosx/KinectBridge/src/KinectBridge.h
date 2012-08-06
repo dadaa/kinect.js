@@ -6,5 +6,6 @@
 #define KinectBridge_KinectBridge_h
 
 void getDepth(int* jsDepth);
+void getVideo(char* jsVideo);
 
 #endif

@@ -5,6 +5,8 @@ const MAX_MINUS_BASE = MAX_DEPTH-BASE_DEPTH_THRESHOLD;
 var Main = {
     start: function() {
         //document.addEventListener("click", Main.onclick, true);
+        Main.buffer = document.kinect.createDepthBuffer();
+
         var canvas = document.createElement("canvas");
         canvas.setAttribute("style", "z-index:1000;position:fixed;left:0px;top:0px;width:100%;background-color:transparent;");
         canvas.setAttribute("width", "640");
@@ -28,7 +30,8 @@ var Main = {
     }, 
     
     play: function() {
-        var depthBuffer = document.kinect.getDepth();
+        document.kinect.getDepthTo(Main.buffer);
+        var depthBuffer = Main.buffer;
         //binalize
         var totalX = 0;
         var totalY = 0;
@@ -69,7 +72,8 @@ var Main = {
     },
     
     idle: function() {
-        var depthBuffer = document.kinect.getDepth();
+        document.kinect.getDepthTo(Main.buffer);
+        var depthBuffer = Main.buffer;
         //binalize
         var total = 0;
         var validcount = 0;
