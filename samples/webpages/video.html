@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<!-- This Source Code Form is subject to the terms of the Mozilla Public
+   - License, v. 2.0. If a copy of the MPL was not distributed with this file,
+   - You can obtain one at http://mozilla.org/MPL/2.0/.  -->
+<html lang="ja" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8" />
+    <title>kinect.js video sample</title>
+    <style type="text/css">
+    html {
+        background-color: black;
+    }
+    #main-canvas {
+        background-color: black;
+        width: 100%;
+    }
+    </style>
+
+    <script src="js/jquery-1.7.2.min.js"></script>
+    <script type="text/javascript">
+        var Main = {
+            start: function(context) {
+                var kinect = document.kinect;
+                if (!kinect) {
+                    alert("no kinect");
+                    return;
+                }
+                Main.kinect = kinect;
+                Main.buffer = kinect.createVideoBuffer();
+                var canvas = document.getElementById("main-canvas");
+                Main.context = canvas.getContext("2d");
+                Main.imagedata = Main.context.createImageData(640, 480);
+                for (var i = 0, n = 640*480*4; i < n; i++) {
+                    Main.imagedata.data[i] = 255;
+                }
+                Main.next();
+            },
+            next: function() {
+                Main.kinect.getVideoTo(Main.buffer);
+                var videoBuffer = Main.buffer;
+                for (var i = 0, n = videoBuffer.length/3; i < n; i++) {
+                    var indexColor = i * 3;
+                    var indexImage = i * 4;
+                    Main.imagedata.data[indexImage] = videoBuffer[indexColor];
+                    Main.imagedata.data[indexImage+1] = videoBuffer[indexColor+1];
+                    Main.imagedata.data[indexImage+2] = videoBuffer[indexColor+2];
+                }
+                Main.context.putImageData(Main.imagedata, 0, 0);
+                setTimeout(Main.next, 10);
+            }
+        };
+
+        $(document).ready(function() {
+            Main.start();
+        });
+    </script>
+</head>
+<body>
+<canvas id="main-canvas" width="640" height="480"></canvas>
+</body>
+</html>
