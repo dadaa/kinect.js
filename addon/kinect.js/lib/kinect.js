@@ -7,12 +7,12 @@ const { ctypes } = Cu.import("resource://gre/modules/ctypes.jsm");
 const url = require("url");
 
 const dylibURL = require("self").data.url(ctypes.libraryName('KinectBridge'));
+//const dylibURL = require("self").data.url('KinectBridge-dfsyxjdaeikyizfzoearfrkbllbm/Build/Products/Debug/libKinectBridge.dylib');
 const dylibPATH = url.toFilename(dylibURL).toString();
 
 const dylib = ctypes.open(dylibPATH);  
 const pixelSize = 640*480;
 const intArrayType = ctypes.ArrayType(ctypes.uint32_t, pixelSize);
-const charArrayType = ctypes.ArrayType(ctypes.char, pixelSize*3);
 
 const getDepth = dylib.declare("getDepth",
                           ctypes.default_abi,
@@ -23,7 +23,7 @@ const getDepth = dylib.declare("getDepth",
 const getVideo = dylib.declare("getVideo",
                           ctypes.default_abi,
                           ctypes.void_t,
-                          charArrayType.ptr
+                          intArrayType.ptr
                           );
 
 exports.getDepth = function() {
@@ -41,7 +41,7 @@ exports.createDepthBuffer = function() {
 }
 
 exports.getVideo = function() {
-    var videoBuffer = new charArrayType();
+    var videoBuffer = new intArrayType();
     getVideo(videoBuffer.address());
     return videoBuffer;
 }
@@ -51,5 +51,5 @@ exports.getVideoTo = function(buffer) {
 }
 
 exports.createVideoBuffer = function() {
-    return new charArrayType();
+    return new intArrayType();
 }
