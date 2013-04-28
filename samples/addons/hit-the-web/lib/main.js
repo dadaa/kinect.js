@@ -16,6 +16,12 @@ function appendScripts2CurrentContent() {
     //call from user content document
     content.kinect = kinect;
     content.kinectImageProcessingScript = scriptContent;
+}
+
+function appendHitTheWeb2CurrentContent() {
+    let window = windows.activeWindow;
+    //to use from context of content script in worker thread 
+    let content = window.gBrowser.contentDocument.wrappedJSObject;
     //performance
     var jquery = content.createElement("script");
     jquery.setAttribute("src", data.url("jquery-1.7.2.min.js"));
@@ -26,10 +32,19 @@ function appendScripts2CurrentContent() {
 }
 
 var widget = widgets.Widget({
-    id: "mozilla-link",
-    label: "Mozilla website",
+    id: "attach-kinect",
+    label: "attach Kinect.",
     contentURL: "http://www.mozilla.org/favicon.ico",
     onClick: function() {
         appendScripts2CurrentContent();
+    }
+});
+
+var widget2 = widgets.Widget({
+    id: "hit-the-web",
+    label: "hit The Web!",
+    contentURL: "http://www.mozilla.org/favicon.ico",
+    onClick: function() {
+        appendHitTheWeb2CurrentContent();
     }
 });
